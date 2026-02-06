@@ -312,3 +312,50 @@
       
     }
     }
+
+/* ===============================
+   INPUT UX + SOFT VALIDATION
+================================ */
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+input:invalid {
+  border-color: rgba(239, 68, 68, 0.6);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+}
+
+::placeholder {
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+/* ===============================
+   MOBILE LAYOUT FIX
+================================ */
+
+@media (max-width: 768px) {
+  .exercise {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .exercise > div:first-child {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .exercise.header {
+    display: none;
+  }
+
+  .exercise input,
+  .exercise textarea {
+    width: 100%;
+    min-height: 44px;
+  }
+}
